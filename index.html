@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ETHIO LOTTARY</title>
+    <!--- font-awesome  ---->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <aside>
+        <a href="/" class="logo btn mt-10  "> <i class="fa-solid fa-coins"></i> </a>
+
+        <ul>
+          <button onclick="account()" class="side_nav" title="Acccount">
+            <i class="fa fa-user" aria-hidden="true"></i> <span>acccount</span>
+          </button>
+          <button onclick="home()" class=" side_nav active" title="Home">
+            <i class="fa fa-home" aria-hidden="true"></i> <span>home</span>
+          </button>
+          <button class="side_nav" title="Setting"><i class="fa-solid fa-gear"></i> <span>setting</span></button>
+        </ul>
+      </aside>
+
+      <main>
+        <header class="w-90 d-flex jc-sb header">
+          <ul class="d-flex g-10  ">
+            <a href="/" title="all games" class="d-flex g-5 c-center btn links"><i class="fa fa-coins "> et</i> </a>
+          </ul>
+
+          <ul class="d-flex g-10  ">
+            <li title="my query" class="d-flex g-5 c-center btn">
+              <i class="fa-solid fa-money-check-dollar"></i>
+              <p id="querty_balance">100</p>
+              ETB
+            </li>
+            <li onclick="account()" title="account" class="d-flex g-5 c-center btn">
+              <img src="assets/-5784208250990866348_121.jpg" alt="" />
+            </li>
+          </ul>
+        </header>
+
+        <div class="home   ">
+          <article
+            style="
+          
+  background: radial-gradient(#ff7b006e, #0000), url('assets/background.png');
+           background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+"
+          >
+            <div class="contenet">
+              <span>10000</span>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, magnam.</p>
+              <button onclick="GameContainer()">Play now</button>
+            </div>
+          </article>
+
+          <div class="card_container">
+            <div class="card">
+              <span> <i class="fa fa-dice"> games</i> </span>
+
+              <img src="assets/numbers.jpg" alt="" />
+              <h3>Lottery 1</h3>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <button>play</button>
+
+              <div class="table_controll">
+                <ul class="title_list">
+                  <li>player</li>
+                  <li>reward</li>
+                  <li>date</li>
+                </ul>
+
+                <ul>
+                  <li class="user_profile">
+                    <img src="/assets/face10.jpg" alt="" /> <span class="name">mintesnoteddddddd</span>
+                  </li>
+                  <li><span>1000</span> <i>ETB</i></li>
+                  <li>jun/29/24</li>
+                </ul>
+                <ul>
+                  <li class="user_profile">
+                    <img src="/assets/face10.jpg" alt="" /> <span class="name">mintesnoteddddddd</span>
+                  </li>
+                  <li><span>1000</span> <i>ETB</i></li>
+                  <li>jun/29/24</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card">
+              <span> <i class="fa fa-dice"> games </i> </span>
+
+              <img src="assets/spin.jpg" alt="" />
+              <h3>Lottery 2</h3>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <button>play</button>
+
+              <div class="table_controll">
+                <ul class="title_list">
+                  <li>player</li>
+                  <li>reward</li>
+                  <li>date</li>
+                </ul>
+
+                <ul>
+                  <li class="user_profile">
+                    <img src="/assets/face10.jpg" alt="" /> <span class="name">mintesnoteddddddd</span>
+                  </li>
+                  <li><span>1000</span> <i>ETB</i></li>
+                  <li>jun/29/24</li>
+                </ul>
+                <ul>
+                  <li class="user_profile">
+                    <img src="/assets/face10.jpg" alt="" /> <span class="name">mintesnoteddddddd</span>
+                  </li>
+                  <li><span>1000</span> <i>ETB</i></li>
+                  <li>jun/29/24</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="game_play_controller d-none ">
+          <div class="game_container">
+            <header>
+              <button onclick="home()" class="btn"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+            </header>
+
+            <div class="choosed_num">
+              <div class="latest_win "><input type="button" class="latest_win_num btn" /></div>
+              <!---  <div class="add_pay">
+                <span class="add_btn">
+                  <button onclick="remove_point()" class="btn"><i class="fa-solid fa-minus"></i></button>
+                  <span class="num_play">10</span>
+                  <button class="btn" onclick="add_point()"><i class="fa-solid fa-plus"></i></button>
+                </span>
+              </div>-------->
+
+              <div class="number_choosed">
+                <input onclick="remove_choose_num(this)" type="button" class="btn choosed_numbers1  " />
+                <input onclick="remove_choose_num(this)" type="button" class="btn choosed_numbers2 " />
+                <input onclick="remove_choose_num(this)" type="button" class="btn choosed_numbers3  " />
+                <input onclick="remove_choose_num(this)" type="button" class="btn choosed_numbers4  " />
+                <input onclick="remove_choose_num(this)" type="button" class="btn  choosed_numbers5 " />
+              </div>
+              <span> Choose 5 number </span>
+            </div>
+
+            <div class="numbers"></div>
+            <div class="numbers"><button onclick="play_now()" class="btn play_btn">pay out</button></div>
+
+            <div class="card_container">
+              <div class="card">
+                <div class="table_controll">
+                  <ul>
+                    <li class="t-center">winner list</li>
+                  </ul>
+
+                  <ul class="title_list">
+                    <li>player</li>
+                    <li>reward</li>
+                    <li>date</li>
+                  </ul>
+
+                  <ul>
+                    <li class="user_profile">
+                      <img src="/assets/face10.jpg" alt="" /> <span class="name">mintesnoteddddddd</span>
+                    </li>
+                    <li><span>1000</span> <i>ETB</i></li>
+                    <li>jun/29/24</li>
+                  </ul>
+                  <ul>
+                    <li class="user_profile">
+                      <img src="/assets/face10.jpg" alt="" /> <span class="name">mintesnoteddddddd</span>
+                    </li>
+                    <li><span>1000</span> <i>ETB</i></li>
+                    <li>jun/29/24</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="win_alert_cont">
+            <div
+              style=" 
+              background: url('assets/giphy.gif'); 
+               background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;"
+              class="winner_container "
+            >
+              <h2>you Winn</h2>
+              <h1>1000ETB</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, magnam.</p>
+              <div class="btns d-flex g-10 ">
+                <button onclick="home()" class="btn">with draw</button>
+                <button onclick="playAgain()" class="btn">play angain</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lost_alert_cont ">
+            <div
+              style=" background:linear-gradient(#0000006c,#0000006c), url('assets/numbers1.jpg');  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;"
+              class="loser_container  "
+            >
+              <h2>you lost</h2>
+              <p>wining number is <small id="win_num">12323</small></p>
+              <h1>-100ETB</h1>
+              <button onclick="playAgain()" class="btn">try again</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="user_controll">
+          <div class="user_profile">
+            <img src="/assets/-5784208250990866348_121.jpg" alt="" />
+            <div class="detail">
+              <h2>mintesnot</h2>
+              <h3>mintesnotyess@gmail.con</h3>
+              <button>edit profile</button>
+            </div>
+          </div>
+          <div class="table_controll">
+            <ul class="title_list">
+              <li>#</li>
+              <li>reward</li>
+              <li>date</li>
+              <li>winn</li>
+            </ul>
+
+            <ul>
+              <li class="user_profile"><span class="name">21334</span></li>
+              <li><span>1000</span> <i>ETB</i></li>
+              <li>wait</li>
+              <li>-</li>
+            </ul>
+            <ul>
+              <li class="user_profile"><span class="name">112003</span></li>
+              <li><span>1000</span> <i>ETB</i></li>
+              <li>jun/29/24</li>
+              <li>win</li>
+            </ul>
+            <ul>
+              <li class="user_profile"><span class="name">223311</span></li>
+              <li><span>1000</span> <i>ETB</i></li>
+              <li>jun/29/24</li>
+              <li>lost</li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
